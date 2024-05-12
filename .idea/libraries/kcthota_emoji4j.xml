@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="kcthota.emoji4j" type="repository">
+    <properties maven-id="com.kcthota:emoji4j:5.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/emoji4j-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lambdaj-2.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hamcrest-all-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/objenesis-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-nodep-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

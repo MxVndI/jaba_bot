@@ -1,0 +1,15 @@
+
+a
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(Ç®&8Ë‰şô1
+g
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(«‹µ€üÿÿÿÿ8Ê‰şô1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(øÚËüıÿÿÿÿ8Í‰şô1
+]	java:S125"<This block of commented-out lines of code should be removed.(†’†³ıÿÿÿÿ8÷Âåõ1
+X	java:S125"<This block of commented-out lines of code should be removed.(”¢ÀÉ8ß½¾åõ1
+:
+java:S2119$"Save and re-use this "Random".(¼İÅf8Ò‰şô1
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(ù Êúûÿÿÿÿ8Ó‰şô1
+Z	java:S106."9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Ó‰şô1
+M
+java:S1144)"0Remove this unused private "printMatrix" method.(ÊşÕÙ8è½¾åõ1
