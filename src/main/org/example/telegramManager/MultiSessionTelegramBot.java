@@ -1,4 +1,4 @@
-package org.example;
+package main.org.example.telegramManager;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -25,7 +26,6 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
     private String token;
 
     private ThreadLocal<Update> updateEvent = new ThreadLocal<>();
-    private HashMap<Long, Integer> gloryStorage = new HashMap<>();
 
     List<Message> sendMessages = new ArrayList<>();
 
@@ -47,11 +47,14 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
     @Override
     public final void onUpdateReceived(Update updateEvent) {
         this.updateEvent.set(updateEvent);
-        onUpdateEventReceived(this.updateEvent.get());
+        try {
+            onUpdateEventReceived(this.updateEvent.get());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void onUpdateEventReceived(Update updateEvent) {
-        //do nothing
+    public void onUpdateEventReceived(Update updateEvent) throws FileNotFoundException {
     }
 
     public Long getCurrentChatId() {
@@ -217,18 +220,6 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public void setUserGlory(int glories) {
-        gloryStorage.put(getCurrentChatId(), glories);
-    }
-
-    public int getUserGlory() {
-        return gloryStorage.getOrDefault(getCurrentChatId(), 0);
-    }
-
-    public void addUserGlory(int glories) {
-        gloryStorage.put(getCurrentChatId(), getUserGlory() + glories);
     }
 
     private SendPhoto createPhotoMessage(InputStream inputStream) {

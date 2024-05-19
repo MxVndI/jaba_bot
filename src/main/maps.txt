@@ -1,4 +1,2 @@
-flag -2 -4 -3 gem tree -3 1 3 -1 tree 1 tree stone -2 tree 2 tree tree 2 gem -1 -2 3 frog
-flag -2 -4 -3 gem tree -3 1 3 -1 tree 1 tree stone -2 tree 2 tree tree 2 gem -1 -2 3 frog
-frog 0 salat tree 1 -1 tree tree tree portal -1 tree flag tree axe 1 tree tree tree tree -1 2 gem gem portal
-gem -2 -4 -3 key tree -2 1 3 1 tree frog 1 stone -2 tree 2 tree tree 2 flag door -2 -1 3
+flag -2 -4 -3 gem tree -3 1 3 -1 tree 1 tree stone -2 tree 2 tree tree salat gem -1 -2 3 frog
+gem -2 -1 1 portal tree -3 1 4 frog tree 1 1 stone -2 tree 2 tree tree 2 🏁 portal -2 -1 3

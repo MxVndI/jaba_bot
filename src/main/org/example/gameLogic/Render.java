@@ -1,4 +1,4 @@
-package org.example;
+package main.org.example.gameLogic;
 
 
 public class Render {

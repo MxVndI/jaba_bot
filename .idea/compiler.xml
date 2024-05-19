@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JabaLab (2)" />
-        <module name="JabaLab" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JabaLab1" target="19" />
+      <module name="notWorkableMaps" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

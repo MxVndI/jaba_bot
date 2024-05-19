@@ -1,11 +1,11 @@
-package org.example;
+package main.org.example.gameLogic;
 
 public class GameMap {
 
     private int jabX;
     private int jabY;
 
-    private static Object[][] gameMap = new Object[5][5];
+    private Object[][] gameMap = new Object[5][5];
 
     public GameMap(Object[][] newMap) {
         for (int i = 0; i < gameMap.length; i++)
