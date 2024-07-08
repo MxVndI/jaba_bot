@@ -21,13 +21,13 @@ public class TelegramMain extends MultiSessionTelegramBot {
     private boolean isNickname = false;
 
     public static final String NAME = "JabaGame"; // TODO: добавьте имя бота в кавычках
-    public static final String TOKEN = "6325207178:AAEs6KmXC6AfGtlXtc86Py5HZaMj7GPuJu4"; //TODO: добавьте токен бота в кавычках
+    public static final String TOKEN = ""; //TODO: добавьте токен бота в кавычках
 
     public TelegramMain() throws FileNotFoundException {
         super(NAME, TOKEN);
     }
 
-    boolean startWait = false; // <- Инициализация булеан переменной в самом начале
+    boolean startWait = false;
 
 
     @Override
@@ -41,7 +41,7 @@ public class TelegramMain extends MultiSessionTelegramBot {
                 sendTextMessageAsync("Введите ваш никнейм");
             }
         } else if (updateEvent.hasMessage() && updateEvent.getMessage().hasText() && startWait == true) {
-            startWait = false; // "Считка" закончена
+            startWait = false;
             nickname = updateEvent.getMessage().getText();
             try {
                 databaseManager.addNewPlayer(nickname);
@@ -148,9 +148,9 @@ public class TelegramMain extends MultiSessionTelegramBot {
     }
 
     class DatabaseManager {
-        private final String DB_USERNAME = "MxVndI";
-        private final String DB_PASSWORD = "poy123boyTOP!";
-        private final String DB_URL = "jdbc:postgresql://localhost:5432/JabaGame";
+        private final String DB_USERNAME = "";
+        private final String DB_PASSWORD = "";
+        private final String DB_URL = "";
 
         private void addNewPlayer(String nickname) throws SQLException {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);

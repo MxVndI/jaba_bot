@@ -27,7 +27,9 @@ public class MapsManager {
                 }
                 id++;
             }
+
     }
+
     private static Object[][] replaceAll(Object[][] matrix) {
         for (int i = 0; i < MAP_SIZE; i++) {
             for (int j = 0; j < MAP_SIZE; j++) {
